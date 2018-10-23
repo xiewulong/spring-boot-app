@@ -7,7 +7,5 @@ CREATE TABLE `t_users`  (
   PRIMARY KEY (`id`)
 );
 
-INSERT INTO `t_users` (`name`, `age`, `created_at`, `updated_at`)
-VALUES ('A', 18, NOW(), NOW())
-     , ('B', 19, NOW(), NOW())
-     ;
+INSERT INTO `t_users` (`name`, `age`, `created_at`, `updated_at`) VALUES ('A', 18, NOW(), NOW());
+INSERT INTO `t_users` (`name`, `age`, `created_at`, `updated_at`) VALUES ('B', 19, NOW(), NOW());
