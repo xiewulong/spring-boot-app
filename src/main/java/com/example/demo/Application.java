@@ -26,20 +26,19 @@ public class Application {
 
   @Bean
   public Docket api() {
-    return new Docket(DocumentationType.SWAGGER_2)
-            .apiInfo(new ApiInfo(
-                    I18n.t("app.name"),
-                    I18n.t("app.description"),
-                    I18n.t("app.version"),
-                    "http://termsOfServiceUrl",
-                    new Contact("name", "http://contact.url", "contact@email.com"),
-                    "license",
-                    "licenseUrl"
-            ))
-            .select()
-              .apis(RequestHandlerSelectors.basePackage(getClass().getPackage().getName()))
-              .build()
-            ;
+    return new Docket(DocumentationType.SWAGGER_2).apiInfo(new ApiInfo(
+                                                    I18n.t("app.name"),
+                                                    I18n.t("app.description"),
+                                                    I18n.t("app.version"),
+                                                    "http://termsOfServiceUrl",
+                                                    new Contact("name", "http://contact.url", "contact@email.com"),
+                                                    "license",
+                                                    "licenseUrl"
+                                                  ))
+                                                  .select()
+                                                    .apis(RequestHandlerSelectors.basePackage(getClass().getPackage().getName()))
+                                                    .build()
+                                                  ;
   }
 
   @Bean
