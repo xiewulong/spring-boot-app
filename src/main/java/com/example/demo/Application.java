@@ -3,8 +3,10 @@ package com.example.demo;
 import com.example.demo.components.I18n;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+// import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 // import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 // import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
@@ -15,8 +17,10 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+// @EnableCircuitBreaker
 // @EnableDiscoveryClient
 // @EnableEurekaServer
+@EnableFeignClients
 @EnableJpaAuditing
 @EnableSwagger2
 @SpringBootApplication
