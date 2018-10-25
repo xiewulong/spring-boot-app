@@ -3,7 +3,7 @@ package com.example.demo.controllers;
 import com.example.demo.forms.UserCreateForm;
 import com.example.demo.models.User;
 import com.example.demo.models.UserRepository;
-// import com.example.demo.services.UserService;
+import com.example.demo.services.ApiService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
@@ -22,14 +22,10 @@ public class UserController {
   @Autowired
   private UserRepository userRepository;
 
-  // @Autowired
-  // private UserService userService;
-
   @ApiOperation(value = "用户列表")
-  @RequestMapping(method = RequestMethod.GET)
+  @RequestMapping(value = "", method = RequestMethod.GET)
   public Iterable<User> index() {
     return userRepository.findAll();
-    // return userService.index();
   }
 
   @ApiOperation(value = "创建用户")
@@ -40,6 +36,15 @@ public class UserController {
     userRepository.save(user);
 
     return user;
+  }
+
+  @Autowired
+  private ApiService apiService;
+
+  @ApiOperation(value = "测试第三方接口")
+  @RequestMapping(value = "/test", method = RequestMethod.GET)
+  public String test() {
+    return apiService.user().index();
   }
 
 }

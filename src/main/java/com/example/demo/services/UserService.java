@@ -1,13 +1,19 @@
 package com.example.demo.services;
 
-import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import feign.RequestLine;
+import org.springframework.stereotype.Service;
+// import org.springframework.cloud.netflix.feign.FeignClient;
+// import org.springframework.web.bind.annotation.RequestMapping;
+// import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient(value = "app2", fallback = UserServiceFallback.class)
+@Service
+// @FeignClient(value = "app_name", fallback = UserServiceFallback.class)
 public interface UserService {
 
-  @RequestMapping(value = "/users", method = RequestMethod.GET)
+  @RequestLine("GET /")
   String index();
+
+  // @RequestMapping(value = "/", method = RequestMethod.GET)
+  // String index();
 
 }
