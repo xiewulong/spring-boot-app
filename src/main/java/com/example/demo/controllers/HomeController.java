@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Api(description = "主页")
 @RestController
-@RequestMapping("/home")
+@RequestMapping("${spring.application.route.prefix}/home")
 public class HomeController {
 
   @ApiOperation(value = "首页")

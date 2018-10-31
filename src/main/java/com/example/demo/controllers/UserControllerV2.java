@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-@Api(description = "用户")
+@Api(description = "用户v2")
 @RestController
-@RequestMapping("/v1${spring.application.route.prefix}/users")
-public class UserController {
+@RequestMapping("/v2${spring.application.route.prefix}/users")
+public class UserControllerV2 {
 
   @Autowired
   private UserRepository userRepository;
@@ -36,15 +36,6 @@ public class UserController {
     userRepository.save(user);
 
     return user;
-  }
-
-  @Autowired
-  private ApiService apiService;
-
-  @ApiOperation(value = "测试第三方接口")
-  @RequestMapping(value = "/test", method = RequestMethod.GET)
-  public String test() {
-    return apiService.user().index();
   }
 
 }
