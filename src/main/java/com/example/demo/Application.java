@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // import org.springframework.boot.context.properties.ConfigurationProperties;
 // import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 // import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+// import org.springframework.cloud.config.server.EnableConfigServer;
 // import org.springframework.cloud.context.config.annotation.RefreshScope;
 // import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
@@ -32,6 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // @EnableCircuitBreaker
+// @EnableConfigServer
 // @EnableDiscoveryClient
 // @EnableEurekaServer
 @EnableFeignClients
@@ -125,15 +127,15 @@ public class Application {
   // }
 
   // @Bean
+  // public PatternServiceRouteMapper patternServiceRouteMapper() {
+  //   return new PatternServiceRouteMapper("(?<name>.*)-(?<version>v.*$)", "${version}/${name}");
+  // }
+
+  // @Bean
   // @ConfigurationProperties("zuul")
   // @RefreshScope
   // public ZuulProperties zuulProperties() {
   //   return new ZuulProperties();
-  // }
-
-  // @Bean
-  // public PatternServiceRouteMapper patternServiceRouteMapper() {
-  //   return new PatternServiceRouteMapper("(?<name>.*)-(?<version>v.*$)", "${version}/${name}");
   // }
 
 }
