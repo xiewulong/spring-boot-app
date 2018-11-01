@@ -51,7 +51,7 @@ public class Application {
   // private String ROUTE_PREFIX;
 
   @Value("${spring.application.swagger.enabled}")
-  private Boolean SWAGGER_ENABLED;
+  private boolean SWAGGER_ENABLED;
 
   @Bean
   public Docket apiDefault() {

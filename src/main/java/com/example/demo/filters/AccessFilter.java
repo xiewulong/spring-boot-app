@@ -11,14 +11,14 @@ public class AccessFilter extends ZuulFilter {
 
   @Override
   public String filterType() {
-    return 'pre';
-    // return 'routing';
-    // return 'post';
-    // return 'error';
+    return "pre";
+    // return "routing";
+    // return "post";
+    // return "error";
   }
 
   @Override
-  public String filterOrder() {
+  public int filterOrder() {
     return 0;
   }
 

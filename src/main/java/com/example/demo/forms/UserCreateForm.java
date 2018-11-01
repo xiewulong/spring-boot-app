@@ -19,6 +19,6 @@ public class UserCreateForm {
   @ApiModelProperty(value = "年龄", example = "20")
   @Max(value = 100)
   @Min(value = 1)
-  private Integer age;
+  private int age;
 
 }
