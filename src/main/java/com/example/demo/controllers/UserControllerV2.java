@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @Api(description = "用户v2")
-@RestController
 @RequestMapping("/v2${spring.application.route.prefix}/users")
+@RestController
 public class UserControllerV2 {
 
   @Autowired

@@ -8,8 +8,8 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 @Api(description = "主页")
-@RestController
 @RequestMapping("${spring.application.route.prefix}/home")
+@RestController
 public class HomeController {
 
   @ApiOperation(value = "首页")

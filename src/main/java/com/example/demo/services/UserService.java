@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 // import org.springframework.web.bind.annotation.RequestMapping;
 // import org.springframework.web.bind.annotation.RequestMethod;
 
-@Service
 // @FeignClient(value = "app_name", fallback = UserServiceFallback.class)
+@Service
 public interface UserService {
 
   @RequestLine("GET /")
