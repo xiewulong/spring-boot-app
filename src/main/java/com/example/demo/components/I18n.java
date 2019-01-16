@@ -29,4 +29,5 @@ public class I18n {
   public static String t(String code, Object... args) {
     return messageSource.getMessage(code, args, locale);
   }
+
 }
