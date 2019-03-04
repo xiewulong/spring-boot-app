@@ -89,7 +89,7 @@ public class Application {
   //                                                   "license",
   //                                                   "licenseUrl"
   //                                                 ))
-  //                                                 .endable(SWAGGER_ENABLED)
+  //                                                 .enable(SWAGGER_ENABLED)
   //                                                 .groupName("v1")
   //                                                 // .pathMapping(ROUTE_PREFIX)
   //                                                 ;
@@ -103,7 +103,7 @@ public class Application {
 
   //     // SwaggerResource appV1SwaggerResource = new SwaggerResource();
   //     // appV1SwaggerResource.setName("App v1");
-  //     // appV1SwaggerResource.setLocation("/app/v2/api-docs?group=v1");
+  //     // appV1SwaggerResource.setLocation("/api-docs/app/v2?group=v1");
   //     // appV1SwaggerResource.setSwaggerVersion("2.0");
   //     // swaggerResources.add(appV1SwaggerResource);
 
