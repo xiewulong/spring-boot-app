@@ -21,7 +21,6 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 // import springfox.documentation.service.ApiInfo;
-// import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 // import springfox.documentation.swagger.web.InMemorySwaggerResourcesProvider;
@@ -64,7 +63,7 @@ public class Application {
                                                   //   I18n.t("app.description"),
                                                   //   I18n.t("app.version"),
                                                   //   "http://termsOfServiceUrl",
-                                                  //   new Contact("name", "http://contact.url", "contact@email.com"),
+                                                  //   "name<contact@email.com>",
                                                   //   "license",
                                                   //   "licenseUrl"
                                                   // ))
@@ -85,7 +84,7 @@ public class Application {
   //                                                   I18n.t("app.description"),
   //                                                   I18n.t("app.version"),
   //                                                   "http://termsOfServiceUrl",
-  //                                                   new Contact("name", "http://contact.url", "contact@email.com"),
+  //                                                   "name<contact@email.com>",
   //                                                   "license",
   //                                                   "licenseUrl"
   //                                                 ))
